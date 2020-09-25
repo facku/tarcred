@@ -1490,7 +1490,23 @@ h3 {
 
 .slider_bg_1 {
   /* background-image: url(../img/img.png); */
-  background-image: url(../img/fondo.jpg);
+  background: rgb(14, 115, 207);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(14, 115, 207, 1) 35%,
+    rgba(0, 130, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(14, 115, 207, 1) 35%,
+    rgba(0, 130, 255, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(14, 115, 207, 1) 35%,
+    rgba(0, 130, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e73cf",endColorstr="#0082ff",GradientType=1);
 }
 
 /* line 4, ../../Arafath/CL/CL October/214. App Landing Page/HTML/scss/_slider.scss */
