@@ -685,14 +685,11 @@
     </div>
 
     <div class="contact" id="contacto">
-      <div class="">
-        <div class="row">
+      <div>
+        <div class="row align-items-center">
           <div class="col-lg-7 col-md-7 col-12">
             <div class="mapContact">
-              <div
-                id="map"
-                style="height: 320px; position: relative; overflow: hidden"
-              ></div>
+              <div id="bmc" style="max-width: 80%"></div>
             </div>
             <script>
               function initMap() {
@@ -788,6 +785,13 @@
         loop: true,
         autoplay: true,
         path: 'lottie/woman.json',
+      });
+      var bmc = bodymovin.loadAnimation({
+        container: document.getElementById('bmc'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'lottie/contacto.json',
       });
     </script>
   </body>
