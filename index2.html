@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TarCred</title>
+    <meta
+      name="description"
+      content="Prestamos con tarjeta de credito online, pedi un adelanto de efectivo con tu tarjeta de credito y pagalo mensualmente sin moverte de tu casa!"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- CSS here -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min0ecb.css?cache=30" />
+    <link rel="stylesheet" href="css/owl.carousel.min0ecb.css?cache=30" />
+    <link rel="stylesheet" href="css/magnific-popup0ecb.css?cache=30" />
+    <link rel="stylesheet" href="css/font-awesome.min0ecb.css?cache=30" />
+    <link rel="stylesheet" href="css/themify-icons0ecb.css?cache=30" />
+    <link rel="stylesheet" href="css/nice-select0ecb.css?cache=30" />
+    <link rel="stylesheet" href="css/flaticon0ecb.css?cache=30" />
+    <link rel="stylesheet" href="css/gijgo0ecb.css?cache=30" />
+    <link rel="stylesheet" href="css/animate.min0ecb.css?cache=30" />
+    <link rel="stylesheet" href="css/slick0ecb.css?cache=30" />
+    <link rel="stylesheet" href="css/slicknav0ecb.css?cache=30" />
+
+    <!-- <link rel="stylesheet" href="https://123efectivo.com/css/responsive.css?cache=30"> -->
+    <link href="css/range0ecb.css?cache=30" rel="stylesheet" />
+    <link href="css/styles0ecb.css?cache=30" rel="stylesheet" />
+
+    <style>
+      .custom-file-label::after {
+        content: '▼';
+      }
+    </style>
+  </head>
+  <body class="containerMobile">
+    <header>
+      <div class="header-area">
+        <div class="main-header-area">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <div class="col-xl-3 col-lg-3">
+                <div class="logo">
+                  <a href="/">
+                    <img src="img/logo_1.png" class="logoImg" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-xl-7 col-lg-7">
+                <div class="main-menu d-none d-lg-block">
+                  <nav>
+                    <ul id="navigation">
+                      <li>
+                        <a href="#como-funciona">Como Funciona</a>
+                      </li>
+                      <li>
+                        <a href="#quienes-somos">Quienes Somos</a>
+                      </li>
+                      <li>
+                        <a href="preguntas-frecuentes.html"
+                          >Preguntas Frecuentes</a
+                        >
+                      </li>
+                      <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="slider_area" id="solicita-un-prestamo">
+      <div class="single_slider d-flex align-items-center slider_bg_1">
+        <div class="">
+          <div class="row align-items-center mtop">
+            <div class="col-xl-7 col-md-7" style="margin: 0 auto">
+              <div id="bm" style="max-width: 80%"></div>
+            </div>
+
+            <div class="col-xl-5 col-md-5">
+              <div class="simulator">
+                <form
+                  method="post"
+                  action="https://123efectivo.com/request/store"
+                  enctype="multipart/form-data"
+                  id="loan"
+                >
+                  <input
+                    type="hidden"
+                    name="_token"
+                    value="hrTVxoQlyCrWymfXPmwKHlpLoXnqaIiWYVCo5ErO"
+                  />
+                  <div id="step1">
+                    <p class="text-form1">¿Cuanto Necesit&aacute;s?</p>
+                    <div class="row">
+                      <div class="col-xl-1 col-1 d-xl-block"></div>
+                      <div class="range-value" id="rangeV"></div>
+                      <div class="col-12 col-xl-10">
+                        <input
+                          id="range"
+                          type="range"
+                          min="1000"
+                          max="50000"
+                          step="1000"
+                          oninput="calcular()"
+                          onchange="calcular()"
+                          name="value"
+                        />
+                      </div>
+                      <div class="col-xl-1 col-1 d-xl-block"></div>
+                    </div>
+                    <div class="row" style="margin-top: -22px">
+                      <div class="col-md-1 col-1"></div>
+                      <div class="col-2">
+                        <p class="text-form4 n-mt" style="text-align: left">
+                          $1.000
+                        </p>
+                      </div>
+                      <div class="col-6"></div>
+                      <div class="col-2">
+                        <p class="text-form4 n-mt" style="text-align: right">
+                          $50.000
+                        </p>
+                      </div>
+                      <div class="col-md-1 col-1"></div>
+                    </div>
+                    <div class="row" style="margin-top: -20px !important">
+                      <div class="col-md-1 col-1"></div>
+                      <div class="col-5">
+                        <p class="text-form4" style="text-align: left">
+                          ¿En Cuantas cuotas quer&eacute;s devolverlo?
+                        </p>
+                      </div>
+                      <div class="col-5">
+                        <p class="text-form4" style="text-align: right">
+                          Pagas <span id="numQuotes">12</span> cuotas fijas de
+                        </p>
+                      </div>
+                      <div class="col-md-1 col-1"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1 col-1"></div>
+                      <div
+                        class="col-4 btn-group btn-group-toggle"
+                        data-toggle="buttons"
+                      >
+                        <label
+                          class="btn btn-circle btn-md lbl-left"
+                          style="margin-left: 0px !important"
+                        >
+                          <input
+                            type="radio"
+                            name="options"
+                            id="option1"
+                            autocomplete="off"
+                            value="3"
+                          />
+                          3
+                        </label>
+                        <label class="btn btn-circle btn-md">
+                          <input
+                            type="radio"
+                            name="options"
+                            id="option2"
+                            autocomplete="off"
+                            value="6"
+                          />
+                          6
+                        </label>
+                        <label class="btn btn-circle btn-md">
+                          <input
+                            type="radio"
+                            name="options"
+                            id="option3"
+                            autocomplete="off"
+                            value="9"
+                          />
+                          9
+                        </label>
+                        <label class="btn btn-circle btn-md active">
+                          <input
+                            type="radio"
+                            name="options"
+                            id="option4"
+                            autocomplete="off"
+                            checked
+                            value="12"
+                          />
+                          12
+                        </label>
+                      </div>
+                      <div
+                        class="col-4"
+                        style="
+                          margin: 0px !important;
+                          padding: 0px !important;
+                          text-align: center;
+                          top: -20px;
+                        "
+                      >
+                        <p id="valQuote">0</p>
+                        <input
+                          type="hidden"
+                          name="quotes_value"
+                          id="quotes_value"
+                        />
+                        <p class="iva">(IVA incluido)</p>
+                      </div>
+                      <div class="col-md-1 col-1"></div>
+                    </div>
+                    <div class="row" style="margin-top: -20px !important">
+                      <div
+                        class="col-md-1 col-1 d-sm-none d-lg-block d-none"
+                      ></div>
+                      <div class="col-md-3 col-3">
+                        <input
+                          type="text"
+                          required=""
+                          name="name"
+                          id="name"
+                          class="form-control fcl frmSimuador"
+                          placeholder="Nombre"
+                        />
+                      </div>
+                      <div class="col-md-2 col-3">
+                        <input
+                          type="text"
+                          required=""
+                          name="lastname"
+                          id="lastname"
+                          class="form-control fcl frmSimuador"
+                          placeholder="Apellidos"
+                        />
+                      </div>
+                      <div class="col-md-5 col-6">
+                        <input
+                          type="text"
+                          required=""
+                          name="phone"
+                          id="phone"
+                          class="form-control fcr frmSimuador"
+                          placeholder="Tel&eacute;fono"
+                        />
+                      </div>
+                      <div
+                        class="col-md-1 col-1 d-sm-none d-lg-block d-none"
+                      ></div>
+
+                      <div class="col-md-12 d-sm-block"><br /></div>
+
+                      <div
+                        class="col-md-1 col-1 d-sm-none d-lg-block d-none"
+                      ></div>
+                      <div class="col-md-5 col-6">
+                        <input
+                          type="email"
+                          required=""
+                          name="email"
+                          id="email"
+                          class="form-control fcl frmSimuador"
+                          placeholder="Email"
+                        />
+                        <span
+                          id="errorEmail"
+                          class="error"
+                          style="display: none"
+                          >El email ya est&aacute; registrado</span
+                        >
+                      </div>
+                      <div class="col-md-5 col-6">
+                        <input
+                          type="submit"
+                          value="Enviar Consulta"
+                          style="background: #1e68fe; color: #fff"
+                          class="form-control fcr frmSimuador"
+                          id="send1"
+                        />
+                      </div>
+                      <div
+                        class="col-md-1 col-1 d-sm-none d-lg-block d-none"
+                      ></div>
+                    </div>
+                  </div>
+                  <div style="display: none" id="step2">
+                    <p class="text-form2 pt-32">
+                      Estas a un solo clic de tu pr&eacute;stamo
+                    </p>
+                    <p class="text-form2">
+                      Faltan algunos datos mas y terminamos!
+                    </p>
+                    <p class="text-form3">
+                      A continuación, por favor completa los datos de tu
+                    </p>
+                    <p class="text-form3">
+                      cuenta bancaria, los mismos los usaremos para
+                    </p>
+                    <p class="text-form3">
+                      transferirte el dinero del pr&eacute;stamo solicitado.
+                    </p>
+                    <p class="text-form3-1"></p>
+                    <div class="row">
+                      <div class="col-md-1 d-xl-block"></div>
+                      <div class="col-md-5 col-6">
+                        <input
+                          type="text"
+                          required=""
+                          name="cuit"
+                          id="cuit"
+                          class="form-control"
+                          placeholder="Cuit / cuil"
+                        />
+                      </div>
+                      <div class="col-md-5 col-6">
+                        <select
+                          name="banco"
+                          id="banco"
+                          class="form-control"
+                          required=""
+                        >
+                          <option value="">Banco</option>
+                          <option value="7">
+                            BANCO DE GALICIA Y BUENOS AIRES S.A.U.
+                          </option>
+                          <option value="8">
+                            BANCO DE LA NACION ARGENTINA
+                          </option>
+                          <option value="9">
+                            BANCO DE LA PROVINCIA DE BUENOS AIRES
+                          </option>
+                          <option value="10">
+                            INDUSTRIAL AND COMMERCIAL BANK OF CHINA
+                          </option>
+                          <option value="11">CITIBANK N.A.</option>
+                          <option value="12">BANCO BBVA ARGENTINA S.A.</option>
+                          <option value="13">
+                            BANCO DE LA PROVINCIA DE CORDOBA S.A.
+                          </option>
+                          <option value="14">BANCO SUPERVIELLE S.A.</option>
+                          <option value="15">
+                            BANCO DE LA CIUDAD DE BUENOS AIRES
+                          </option>
+                          <option value="16">BANCO PATAGONIA S.A.</option>
+                          <option value="17">BANCO HIPOTECARIO S.A.</option>
+                          <option value="18">BANCO DE SAN JUAN S.A.</option>
+                          <option value="19">BANCO MUNICIPAL DE ROSARIO</option>
+                          <option value="20">BANCO SANTANDER RIO S.A.</option>
+                          <option value="21">BANCO DEL CHUBUT S.A.</option>
+                          <option value="22">BANCO DE SANTA CRUZ S.A.</option>
+                          <option value="23">
+                            BANCO DE LA PAMPA SOCIEDAD DE ECONOMÍA M
+                          </option>
+                          <option value="24">BANCO DE CORRIENTES S.A.</option>
+                          <option value="25">
+                            BANCO PROVINCIA DEL NEUQUÉN SOCIEDAD ANÓ
+                          </option>
+                          <option value="26">BRUBANK S.A.U.</option>
+                          <option value="27">BANCO INTERFINANZAS S.A.</option>
+                          <option value="28">HSBC BANK ARGENTINA S.A.</option>
+                          <option value="29">
+                            JPMORGAN CHASE BANK, NATIONAL ASSOCIATIO
+                          </option>
+                          <option value="30">
+                            BANCO CREDICOOP COOPERATIVO LIMITADO
+                          </option>
+                          <option value="31">BANCO DE VALORES S.A.</option>
+                          <option value="32">BANCO ROELA S.A.</option>
+                          <option value="33">BANCO MARIVA S.A.</option>
+                          <option value="34">BANCO ITAU ARGENTINA S.A.</option>
+                          <option value="35">
+                            BANK OF AMERICA, NATIONAL ASSOCIATION
+                          </option>
+                          <option value="36">BNP PARIBAS</option>
+                          <option value="37">
+                            BANCO PROVINCIA DE TIERRA DEL FUEGO
+                          </option>
+                          <option value="38">
+                            BANCO DE LA REPUBLICA ORIENTAL DEL URUGU
+                          </option>
+                          <option value="39">BANCO SAENZ S.A.</option>
+                          <option value="40">BANCO MERIDIAN S.A.</option>
+                          <option value="41">BANCO MACRO S.A.</option>
+                          <option value="42">
+                            BANCO COMAFI SOCIEDAD ANONIMA
+                          </option>
+                          <option value="43">
+                            BANCO DE INVERSION Y COMERCIO EXTERIOR S
+                          </option>
+                          <option value="44">BANCO PIANO S.A.</option>
+                          <option value="45">
+                            BANCO JULIO SOCIEDAD ANONIMA
+                          </option>
+                          <option value="46">
+                            BANCO RIOJA SOCIEDAD ANONIMA UNIPERSONAL
+                          </option>
+                          <option value="47">BANCO DEL SOL S.A.</option>
+                          <option value="48">
+                            NUEVO BANCO DEL CHACO S. A.
+                          </option>
+                          <option value="49">BANCO VOII S.A.</option>
+                          <option value="50">BANCO DE FORMOSA S.A.</option>
+                          <option value="51">BANCO CMF S.A.</option>
+                          <option value="52">
+                            BANCO DE SANTIAGO DEL ESTERO S.A.
+                          </option>
+                          <option value="53">BANCO INDUSTRIAL S.A.</option>
+                          <option value="54">
+                            NUEVO BANCO DE SANTA FE SOCIEDAD ANONIMA
+                          </option>
+                          <option value="55">
+                            BANCO CETELEM ARGENTINA S.A.
+                          </option>
+                          <option value="56">
+                            BANCO DE SERVICIOS FINANCIEROS S.A.
+                          </option>
+                          <option value="57">
+                            BANCO BRADESCO ARGENTINA S.A.U.
+                          </option>
+                          <option value="58">
+                            BANCO DE SERVICIOS Y TRANSACCIONES S.A.
+                          </option>
+                          <option value="59">RCI BANQUE S.A.</option>
+                          <option value="60">
+                            BACS BANCO DE CREDITO Y SECURITIZACION S
+                          </option>
+                          <option value="61">BANCO MASVENTAS S.A.</option>
+                          <option value="62">WILOBANK S.A.</option>
+                          <option value="63">
+                            NUEVO BANCO DE ENTRE RÍOS S.A.
+                          </option>
+                          <option value="64">BANCO COLUMBIA S.A.</option>
+                          <option value="65">BANCO BICA S.A.</option>
+                          <option value="66">BANCO COINAG S.A.</option>
+                          <option value="67">BANCO DE COMERCIO S.A.</option>
+                          <option value="68">
+                            BANCO SUCREDITO REGIONAL S.A.U.
+                          </option>
+                          <option value="69">
+                            BANK OF CHINA LIMITED SUCURSAL BUENOS AI
+                          </option>
+                          <option value="70">
+                            FORD CREDIT COMPAÑIA FINANCIERA S.A.
+                          </option>
+                          <option value="71">
+                            COMPAÑIA FINANCIERA ARGENTINA S.A.
+                          </option>
+                          <option value="72">
+                            VOLKSWAGEN FINANCIAL SERVICES COMPAÑIA F
+                          </option>
+                          <option value="73">
+                            CORDIAL COMPAÑÍA FINANCIERA S.A.
+                          </option>
+                          <option value="74">
+                            FCA COMPAÑIA FINANCIERA S.A.
+                          </option>
+                          <option value="75">
+                            GPAT COMPAÑIA FINANCIERA S.A.U.
+                          </option>
+                          <option value="76">
+                            MERCEDES-BENZ COMPAÑÍA FINANCIERA ARGENT
+                          </option>
+                          <option value="77">
+                            ROMBO COMPAÑÍA FINANCIERA S.A.
+                          </option>
+                          <option value="78">
+                            JOHN DEERE CREDIT COMPAÑÍA FINANCIERA S.
+                          </option>
+                          <option value="79">
+                            PSA FINANCE ARGENTINA COMPAÑÍA FINANCIER
+                          </option>
+                          <option value="80">
+                            TOYOTA COMPAÑÍA FINANCIERA DE ARGENTINA
+                          </option>
+                          <option value="81">
+                            FINANDINO COMPAÑIA FINANCIERA S.A.
+                          </option>
+                          <option value="82">
+                            MONTEMAR COMPAÑIA FINANCIERA S.A.
+                          </option>
+                          <option value="83">
+                            TRANSATLANTICA COMPAÑIA FINANCIERA S.A.
+                          </option>
+                          <option value="84">
+                            CREDITO REGIONAL COMPAÑIA FINANCIERA S.A
+                          </option>
+                        </select>
+                      </div>
+                      <div class="col-md-1 d-xl-block"></div>
+
+                      <div class="col-md-12 d-xl-block"><br /></div>
+
+                      <div class="col-md-1 d-xl-block"></div>
+                      <div class="col-md-5 col-6">
+                        <select
+                          name="tipoCuenta"
+                          id="tipoCuenta"
+                          class="form-control"
+                          required=""
+                        >
+                          <option value="">Tipo de cuenta</option>
+                          <option value="1">Caja de ahorros</option>
+                          <option value="2">Cuenta Corriente</option>
+                        </select>
+                      </div>
+                      <div class="col-md-5 col-6">
+                        <input
+                          type="text"
+                          required=""
+                          name="cbu"
+                          id="cbu"
+                          class="form-control"
+                          placeholder="CBU ( 22 digitos )"
+                          minlength="22"
+                          maxlength="22"
+                        />
+                      </div>
+                      <div class="col-md-1 d-xl-block"></div>
+                    </div>
+                    <p class="text-form2 pt-32">
+                      &Uacute;ltimo paso y acabamos
+                    </p>
+                    <p class="text-form5">
+                      Necesitamos una foto de tu dni de cada lado para validar
+                      tu identidad
+                    </p>
+                    <div class="row">
+                      <div class="col-md-1 d-xl-block"></div>
+                      <div class="col-md-5 col-5">
+                        <div class="dni1">
+                          <input
+                            required=""
+                            lang="es"
+                            type="file"
+                            class="custom-file-input"
+                            id="dni1"
+                            name="dni1"
+                            accept=".jpg,.png,.jpeg"
+                          />
+                          <label class="custom-file-label cfl1" for="dni1"
+                            >Foto dni ( frente )</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-5 col-5">
+                        <div class="dni2">
+                          <input
+                            required=""
+                            lang="es"
+                            type="file"
+                            class="custom-file-input"
+                            id="dni2"
+                            name="dni2"
+                            accept=".jpg,.png,.jpeg"
+                          />
+                          <label class="custom-file-label cfl2" for="dni2"
+                            >Foto dni ( dorso )</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-1 d-xl-block"></div>
+                    </div>
+                    <div class="row" style="margin-top: 15px">
+                      <div class="col-md-4 col-1"></div>
+                      <div class="col-md-4 col-10">
+                        <input
+                          type="submit"
+                          value="Enviar Consulta"
+                          style="background: #1e68fe; color: #fff"
+                          class="form-control"
+                          id="send2"
+                        />
+                      </div>
+                      <div class="col-md-4 col-1"></div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service_area" id="como-funciona">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-md-10">
+            <div class="section_title text-center mb-95">
+              <h3>Acced&eacute; al mejor pr&eacute;stamo en 3 simples pasos</h3>
+              <p>
+                El &uacute;nico requisito es que tengas tarjeta de
+                cr&eacute;dito
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="single_service">
+              <div
+                class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center"
+              >
+                <div class="service_icon">
+                  <img src="img/icono1.png" alt="" />
+                </div>
+              </div>
+              <div class="service_content text-center">
+                <p>
+                  <span class="strong">Facil.</span><br />
+                  Completás el formulario, lleva muy poco tiempo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="single_service active">
+              <div
+                class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center"
+              >
+                <div class="service_icon">
+                  <img src="img/icono2.png" alt="" />
+                </div>
+              </div>
+              <div class="service_content text-center">
+                <p>
+                  <span class="strong">Rápido</span><br />
+                  Abonas el link de pago mediante Mercado Pago, para seleccionar
+                  el monto y las cuotas que necesitás. Pagás con tu tarjeta de
+                  crédito.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="single_service">
+              <div
+                class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center"
+              >
+                <div class="service_icon">
+                  <img src="img/icono3.png" alt="" />
+                </div>
+              </div>
+              <div class="service_content text-center">
+                <p>
+                  <span class="strong">Seguro</span><br />
+                  Transferimos el dinero a tu cuenta bancaria dentro de las 24hs
+                  (generalmente el mismo dia) y usalo para lo que quieras!
+                  Abonás las cuotas mensualmente en tu resumen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service_area" id="quienes-somos">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 col-md-10">
+            <div class="section_title mb-95">
+              <h3 class="text-center">¿Quienes Somos?</h3>
+              <p class="quienes_somos">
+                Tarcred es una empresa financiera joven que busca brindar
+                facilidad en la forma de acceder al crédito a las personas.
+                Abocada en brindar un servicio de calidad y profesionalismo,
+                garantizando siempre la cuota más baja del mercado. Brindando
+                tasas convenientes y te damos a elegir el plazo que mejor se
+                adecue para que lo devuelvas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact" id="contacto">
+      <div class="">
+        <div class="row">
+          <div class="col-lg-7 col-md-7 col-12">
+            <div class="mapContact">
+              <div
+                id="map"
+                style="height: 320px; position: relative; overflow: hidden"
+              ></div>
+            </div>
+            <script>
+              function initMap() {
+                var uluru = {
+                  lat: -34.601206,
+                  lng: -58.434687,
+                };
+                var grayStyles = [
+                  {
+                    featureType: 'all',
+                  },
+                  {
+                    elementType: 'labels.text.fill',
+                    stylers: [
+                      {
+                        color: '#ccdee9',
+                      },
+                    ],
+                  },
+                ];
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  center: {
+                    lat: -34.601206,
+                    lng: -58.434687,
+                  },
+                  zoom: 15,
+                  scrollwheel: false,
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map,
+                  title: 'Av. Corrientes 4881',
+                });
+              }
+            </script>
+          </div>
+
+          <div class="col-lg-1 d-block"></div>
+          <div class="col-lg-4 contact_data col-4">
+            <img class="contact_logo row" src="img/logo_2.png" />
+            <h3>Cont&aacute;ctanos</h3>
+            <a class="contact_mail" href="mailto:info@tarcred.com"
+              >info@tarcred.com</a
+            >
+            <p class="contact_phone_label">Tel &amp; Whatsapp</p>
+            <a class="contact_phone" href="tel:2804-000000">2804-123456</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="text-center"><p>Copyright &copy; 2020</p></div>
+      </div>
+    </footer>
+
+    <script src="js/vendor/modernizr-3.5.0.min0ecb.js?cache=30"></script>
+    <script src="js/vendor/jquery-1.12.4.min0ecb.js?cache=30"></script>
+    <script src="js/popper.min0ecb.js?cache=30"></script>
+    <script src="js/bootstrap.min0ecb.js?cache=30"></script>
+    <script src="js/owl.carousel.min0ecb.js?cache=30"></script>
+    <script src="js/isotope.pkgd.min0ecb.js?cache=30"></script>
+    <script src="js/ajax-form0ecb.js?cache=30"></script>
+    <script src="js/waypoints.min0ecb.js?cache=30"></script>
+    <script src="js/jquery.counterup.min0ecb.js?cache=30"></script>
+    <script src="js/imagesloaded.pkgd.min0ecb.js?cache=30"></script>
+    <script src="js/scrollIt0ecb.js?cache=30"></script>
+    <script src="js/jquery.scrollUp.min0ecb.js?cache=30"></script>
+    <script src="js/wow.min0ecb.js?cache=30"></script>
+    <script src="js/nice-select.min0ecb.js?cache=30"></script>
+    <script src="js/jquery.slicknav.min0ecb.js?cache=30"></script>
+    <script src="js/jquery.magnific-popup.min0ecb.js?cache=30"></script>
+    <script src="js/plugins0ecb.js?cache=30"></script>
+    <script src="js/gijgo.min0ecb.js?cache=30"></script>
+
+    <!--contact js-->
+    <script src="js/jquery.ajaxchimp.min0ecb.js?cache=30"></script>
+    <script src="js/jquery.form0ecb.js?cache=30"></script>
+    <script src="js/jquery.validate.min0ecb.js?cache=30"></script>
+    <script src="js/jqury.valdiate.additional-methods.min0ecb.js?cache=30"></script>
+    <script src="js/jquery.validate_es0ecb.js?cache=30"></script>
+    <script src="js/mail-script0ecb.js?cache=30"></script>
+    <script src="js/jquery.easing.min0ecb.js?cache=30"></script>
+
+    <script src="js/main0ecb.js?cache=30"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
+    <script>
+      var animation = bodymovin.loadAnimation({
+        container: document.getElementById('bm'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'lottie/dating-app-online-chat.json',
+      });
+    </script>
+  </body>
+
+  <!-- Mirrored from 123efectivo.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Sep 2020 16:20:00 GMT -->
+</html>
