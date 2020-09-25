@@ -84,14 +84,8 @@
       <div class="single_slider d-flex align-items-center slider_bg_1">
         <div class="">
           <div class="row align-items-center mtop">
-            <div class="col-xl-7 col-md-7">
-              <div class="slider_text">
-                <h3>Solicita tu pr&eacute;stamo online, sin vueltas,</h3>
-                <h3>acreditaci&oacute;n al instante en tu cuenta bancaria,</h3>
-                <h3>y al m&aacute;s bajo costo del mercado.</h3>
-                <p>¡Solo necesitas tener tarjeta de credito y CBU!</p>
-                <!--                        <h2>TNA 55%</h2>-->
-              </div>
+            <div class="col-xl-7 col-md-7" style="margin: 0 auto">
+              <div id="bm" style="max-width: 450px"></div>
             </div>
 
             <div class="col-xl-5 col-md-5">
@@ -785,8 +779,17 @@
     <script src="js/jquery.easing.min0ecb.js?cache=30"></script>
 
     <script src="js/main0ecb.js?cache=30"></script>
-    <!-- <script src="../secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
-        <script src="../www.mercadopago.com/v2/security.js" view="home"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
+    <script>
+      var animation = bodymovin.loadAnimation({
+        container: document.getElementById('bm'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'img/anim01.json',
+      });
+    </script>
   </body>
 
   <!-- Mirrored from 123efectivo.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Sep 2020 16:20:00 GMT -->
