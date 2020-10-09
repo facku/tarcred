@@ -689,34 +689,42 @@ $(document).ready(function () {
       $('#phone').is(':valid') &&
       $('#email').is(':valid')
     ) {
-      $.get('/validemail', { email: $('#email').val() }, function (d) {
-        if (d == 'true') {
-          $('#step1').toggle('slide');
-          $('#step2').toggle('slide');
-          $('#errorEmail').hide('slow');
+      // $.get('/validemail', { email: $('#email').val() }, function (d) {
+      //   if (d == 'true') {
+      //     $('#step1').toggle('slide');
+      //     $('#step2').toggle('slide');
+      //     $('#errorEmail').hide('slow');
 
-          $('#loan').validate({
-            rules: {
-              dni1: { filesize: 10 * 1024 * 1024, required: true },
-              dni2: { filesize: 10 * 1024 * 1024, required: true },
-              cuit: { required: true },
-              banco: { required: true },
-              tipoCuenta: { required: true },
-              cbu: { required: true },
-            },
-            messages: {
-              dni1: {
-                filesize: 'Tama\u00F1o m\u00E1ximo de la imagen son 10 MB',
-              },
-              dni2: {
-                filesize: 'Tama\u00F1o m\u00E1ximo de la imagen son 10 MB',
-              },
-            },
-          });
-        } else {
-          $('#errorEmail').show('slow');
-        }
-      });
+      //     $('#loan').validate({
+      //       rules: {
+      //         dni1: { filesize: 10 * 1024 * 1024, required: true },
+      //         dni2: { filesize: 10 * 1024 * 1024, required: true },
+      //         cuit: { required: true },
+      //         banco: { required: true },
+      //         tipoCuenta: { required: true },
+      //         cbu: { required: true },
+      //       },
+      //       messages: {
+      //         dni1: {
+      //           filesize: 'Tama\u00F1o m\u00E1ximo de la imagen son 10 MB',
+      //         },
+      //         dni2: {
+      //           filesize: 'Tama\u00F1o m\u00E1ximo de la imagen son 10 MB',
+      //         },
+      //       },
+      //     });
+      //   } else {
+      //     $('#errorEmail').show('slow');
+      //   }
+      // });
+      var datos = {
+        name: $('#name').val(),
+        lastname: $('#lastname').val(),
+        phone: $('#phone').val(),
+        email: $('#email').val(),
+      };
+
+      alert(JSON.stringify(datos));
 
       return false;
     }
